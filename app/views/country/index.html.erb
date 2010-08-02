@@ -1,0 +1,31 @@
+<h1>Country Organization</h1>
+<div style="clear:all"></div>
+<ul class="object-tools">
+	<li><%= link_to "Add Sector",{:controller=>"country",:action=>"new_sector"}, :class=>"addlink" %></li>
+</ul>
+<div>
+
+	<h2>Sectors</h2>
+
+	<%  if not @sectors.blank? %>
+		<table>
+			<tr>
+				<th>Province</th>
+				<th>District</th>
+				<th>Sector</th>
+			</tr>
+			<tbody>
+				<% for sector in @sectors %>
+				<tr>
+					<td><%= sector.district.province.name %></td>
+					<td><%= sector.district.name %></td>
+					<td><%= sector.name %></td>
+				</tr>
+				<%end%>
+			</tbody>
+		</table>
+	<% else %>	
+		<%= yeld_error "Couldn't find any sectors. You need to seed you database through %rake db:seed" %>
+	<%end%>
+
+</div>

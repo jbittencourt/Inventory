@@ -1,0 +1,28 @@
+/* table headings are pretty */
+th { font-weight: bold; font-size: 120%; color: white; text-align: center;
+background:#7CA0C7 url(/media/img/admin/default-bg.gif) top left repeat-x;
+}
+th:first-child { text-align: left; }
+/* float tree handles out into the margin. */
+span.treehandle { width: 1.1em; text-align: center; float: left; margin-left:-1.2em; padding: 0 0; }
+/* leave room on left edge of table for floated tree handles */
+table.tree { margin-left: 1.2em; }
+/* trick to shift a top manager row left */
+.shiftleft { position: relative; left: -1em; }
+/* right align columns of numbers */
+.num { text-align: right; }
+/* bold face rows representing sums */
+tr.sum td { font-weight: bold; }
+/* don't bold-face adjustment links */
+tr .tool { font-weight: normal; }
+/* float the +/- link to right */
+.editlink { float: right; text-align: left; width: 2em; padding-left:
+1em; margin-left: .5em; height: 100%; }
+/* closely manage the size/style of the edit-allocation forms */
+form.editbox select { width: 3.5em; }
+form.editbox input[type=text] { width: 4.5em; margin: 0 .5em; }
+form.editbox input[type=submit] { width: 3em; }
+form.editbox div { clear: right; }
+/* by default, don't show the edit dropdown */
+form.editbox { visibility: hidden; height: 0; }
+form.editbox.shown { visibility: visible; height: auto; }

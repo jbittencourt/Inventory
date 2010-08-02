@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>Documents: <%= controller.action_name %></title>
+
+	<%= stylesheet_link_tag 'main' %>
+	<%= stylesheet_link_tag 'layout' %>
+	<%= stylesheet_link_tag 'table' %>
+	<%# we need to include prototype, etc... %>
+	<%= javascript_include_tag :defaults %>
+</head>
+<body>
+	<!-- Container -->
+	<div id="container">
+	    <!-- Header -->
+	    <div id="header">
+	        <div id="branding">
+				<h1 id="site-name">OLPC Rwanda Inventory System</h1>
+	        </div>
+	        <div id="user-tools">Welcome, <strong>Juliano</strong>. <a href="/accounts/password_change/">Change password</a> / <a href="/accounts/logout/">Log out</a></div>
+	    </div>
+	    <!-- END Header -->
+		<div id="primary_menu">
+			<ul>
+				<li><%= link_to "Dashboard", :controller=>"dashboard" %></li>
+				<li><%= link_to "Schools", :controller=>"schools" %></li>
+				<li>Admin</li>
+			</ul>
+		</div>
+
+	    <!-- Content -->
+	    <div id="content" class="colM">  
+    		<%= yield  %>
+		</div>
+</body>
+</html>

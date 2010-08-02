@@ -1,0 +1,12 @@
+<% form_for @sector, :html => {} do |f| %>
+  <%= f.error_messages %>
+
+  <p><%= label_tag :name, "Name"%> <%= f.text_field :name %></p>
+
+  <p><%= label_tag :districts, "Districts" %> <%= f.select :district_id, @districts.collect {|c| [ c.name, c.id ]} %></p>
+  <br/>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
