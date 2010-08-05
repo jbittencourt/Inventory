@@ -1,0 +1,15 @@
+<h1>Edit Laptop Model</h1>
+
+<% form_for ([:admin, @laptop_model], :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+
+  <p><%= label_tag :name, "Name"%> <%= f.text_field :name %></p>
+  <p><%= label_tag :manufacturer, "Manufactures"%> <%= f.text_field :manufacturer %></p>
+
+   <%= label_tag :picture, "Laptop Picture"%> <%= f.file_field :picture %>
+  <br/>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>

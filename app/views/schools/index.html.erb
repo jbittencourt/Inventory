@@ -1,18 +1,33 @@
-<h1>Listing schools</h1>
+<h1>Schools</h1>
 
-<table>
-  <tr>
-  </tr>
 
-<% @schools.each do |school| %>
-  <tr>
-    <td><%= link_to 'Show', school %></td>
-    <td><%= link_to 'Edit', edit_school_path(school) %></td>
-    <td><%= link_to 'Destroy', school, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+
+<ul class="object-tools">
+	<li><%= link_to "Add School", new_school_path, :class=>"addlink" %></li>
+</ul>
+
+
+<%  if not @schools.blank? %>
+	<table>
+		<tr>
+			<th>School Name</th>
+			<th>Sector</th>
+			<th>Head of School</th>
+			<th>Contact Phone</th>
+			<th># of Students</th>
+		</tr>
+		<tbody>
+			<% for school in @schools %>
+				<tr>
+					<td><%= link_to school.name, school_url(school) %></td>
+					<td><%= school.sector.name %></td>
+					<td></td>
+					<td></td>
+					<td><%= school.number_of_students %></td>
+				</tr>
+			<% end %>
+			</tbody>
+		</table>
+<% else %>
+	<%= yeld_error 	"No schools registered" %>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New school', new_school_path %>

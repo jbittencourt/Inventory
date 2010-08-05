@@ -1,0 +1,23 @@
+8
+
+dir
+0
+https://semear.googlecode.com/svn/trunk/app/views/shared
+https://semear.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+_rounded_box.html.erb
+file
+
+
+
+add
+

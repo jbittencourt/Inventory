@@ -1,0 +1,40 @@
+
+<div id="layout-column-left">
+	
+<% rounded_titled_box "Laptop Models",:id=>'laptop-models' do |b| %>
+	<ul class="object-tools">
+		<li><%= link_to "Add Model", new_admin_laptop_model_path, :class=>"addlink" %></li>
+	</ul>
+	<%  if not @laptop_models.blank? %>
+		<ul>
+		<% for model in @laptop_models %>
+			<li><%= image_tag model.picture.url(:icon) %> <%= link_to model.name, admin_laptop_model_url(model) %>  <%= link_to "Edit", edit_admin_laptop_model_url(model),  :class=>"button-edit"  %>  </li>
+		<% end %>
+		</ul>
+	<% else %>
+		<%= yeld_error "No laptop model registered!" %>
+	<% end %>
+
+<% end %>
+
+</div>
+
+
+<div id="layout-column-right">
+	
+<% rounded_titled_box "Laptop Status",:id=>'laptop-models' do |b| %>
+	<ul class="object-tools">
+		<li><%= link_to "Add Status",new_admin_laptop_status_url, :class=>"addlink" %></li>
+	</ul>
+	<%  if not @laptop_statuses.blank? %>
+		<ul>
+		<% for status in @laptop_statuses %>
+			<li><%= link_to "#{status.name} <span class=\"laptop-status-severity\">#{status.severity}</span>", admin_laptop_status_url(status) %>  <%= link_to "Edit", edit_admin_laptop_status_url(status),  :class=>"button-edit"  %>  </li>
+		<% end %>
+		</ul>
+	<% else %>
+		<%= yeld_error "No laptop status registered!" %>
+	<% end %>
+<% end %>
+
+</div>

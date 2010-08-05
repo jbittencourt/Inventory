@@ -1,0 +1,9 @@
+<h1>Laptop Model</h1>
+
+<% rounded_box :id=>'laptop-models-picture' do |b| %>
+	<%= image_tag @laptop_model.picture.url(:big) %>
+<% end %>
+
+
+<p><em>Name:</em> <%= @laptop_model.name %> </p>
+<p><em>Manufacturer:</em> <%= @laptop_model.manufacturer %> </p>

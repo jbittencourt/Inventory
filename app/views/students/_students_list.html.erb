@@ -1,0 +1,29 @@
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Date of Birth</th>
+		<th>Current Classroom</th>
+		<th>Mother</th>
+		<th>Mother's National ID</th>
+		<th>Responsible person</th>
+		<th>Responsible's National ID</th>
+		<th>Responsible's Phone</th>
+		<th>Responsible's Kindship</th>
+
+	</tr>
+	<tbody>
+		<% for student in students %>
+			<tr>
+				<td><%= student.name %></td>
+				<td><%= student.date_of_birth %></td>
+				<td><%= student.classrooms.first unless student.classrooms.blank? %></td>
+				<td><%= student.mother %></td>
+				<td><%= student.mother_national_id %></td>
+				<td><%= student.responsible %></td>
+				<td><%= student.responsible_national_id %></td>
+				<td><%= student.responsible_kindship %></td>
+				<td><%= student.phone %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

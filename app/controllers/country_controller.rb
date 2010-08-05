@@ -2,11 +2,14 @@ class CountryController < ApplicationController
   
   def index
     @sectors = Sector.find(:all)
+    @districts = District.find(:all)
+    @provinces = Province.find(:all)
   end
   
   def new_sector
     @sector = Sector.new
     @districts = District.find(:all)
+
     
     respond_to do |format|
       format.html # new_sector.html.erb

@@ -1,3 +1,54 @@
+<h1>School: <%= @school.name %></h1>
 
-<%= link_to 'Edit', edit_school_path(@school) %> |
-<%= link_to 'Back', schools_path %>
+<ul class="object-tools">
+	<li><%= link_to 'Edit', edit_school_path(@school) %></li>
+	<li><%= link_to 'Back', schools_path %></li>
+</ul>
+
+<% rounded_titled_box "School Info",:id=>'school-info' do |b| %>
+	<p><em>Name:</em> <%= @school.name %> </p>
+	<p><em>Longitude:</em> <%= @school.longitude %> </p>
+	<p><em>Latitude:</em>  <%= @school.latitude %> </p>	
+	<p><em>Declared Number of students:</em>  <%= @school.number_of_students %> </p>	
+<% end %>
+
+<div class="clear"></div>
+
+<div id="layout-column-left">
+	<% rounded_titled_box "Teachers",:id=>'teachers-list' do |b| %>
+		<ul class="object-tools">
+			<li><%= link_to 'Add Teachers', new_school_teacher_path(@school), :class=>"addlink" %></li>
+		</ul>
+		<%  if not @school.teachers.blank? %>
+			<%= render :partial => "teachers/teachers_list", :locals => { :teachers => @school.teachers } %>
+		<% else %>
+			<%= yeld_error 	"No teachers registered in this school." %>
+		<% end %>
+		
+	<% end %>
+</div>
+
+<div id="layout-column-right">
+	<% rounded_titled_box "Classrooms",:id=>'classrooms-list' do |b| %>
+	<ul class="object-tools">
+		<li><%= link_to 'Add Classrooms', new_school_classroom_path(@school), :class=>"addlink" %></li>
+	</ul>
+	<%  if not @school.classrooms.blank? %>
+		<%= render :partial => "classrooms/classrooms_list", :locals => { :classrooms => @school.classrooms } %>
+	<% else %>
+		<%= yeld_error 	"No classrooms registered in this school." %>
+	<% end %>		
+	<% end %>
+	
+	<% rounded_titled_box "Students",:id=>'students-box' do |b| %>
+	<ul class="object-tools">
+		<li><%= link_to 'Load Students in Bulk', {:controller=>school_students_path(@school),:action=>"new_bulk"} , :class=>"addlink" %></li>
+	</ul>
+	<%  if not @school.students.blank? %>
+		<p><em>Number of Registered Students:</em> <%= @school.students.size %></p>
+	<% else %>
+		<%= yeld_error 	"No students registered in this school." %>
+	<% end %>		
+	<% end %>
+	
+</div>

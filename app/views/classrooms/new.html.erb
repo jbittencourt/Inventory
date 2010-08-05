@@ -1,0 +1,18 @@
+<h1>Add New Classroom to <%= @school.name %><h1>
+	<ul class="object-tools">
+		<li><%= link_to 'Back', school_path(@school) %></li>
+	</ul>
+
+
+<% rounded_titled_box "Classroom Info",:id=>'classroom-info' do |b| %>
+	<%= render :partial => "classrooms/form", :locals => { :classroom => @classroom, :school=>@school } %>
+<% end %>
+
+
+<div id="classrooms-list">
+	<%  if not @school.teachers.blank? %>
+		<%= render :partial => "classrooms/classrooms_list", :locals => { :classrooms => @school.classrooms } %>
+	<% else %>
+		<%= yeld_error 	"No classroom registered in this school." %>
+	<% end %>
+<end>

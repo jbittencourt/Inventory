@@ -1,8 +1,9 @@
 class SchoolsController < ApplicationController
+  
   # GET /schools
   # GET /schools.xml
   def index
-    @schools = School.all
+    @schools = School.all 
 
     respond_to do |format|
       format.html # index.html.erb
@@ -82,4 +83,12 @@ class SchoolsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def auto_complete_for_school_sector_name
+    re = Regexp.new("^#{params[:school][:sector_name]}", "i")
+    find_options = { :order => "name ASC" }
+    @sectors = Sector.find(:all, find_options).collect(&:name).select { |org| org.match re }
+            render :inline => "<%= content_tag(:ul, @sectors.map { |org| content_tag(:li, h(org)) }) %>"
+  end
+  
 end

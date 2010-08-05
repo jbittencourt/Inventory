@@ -1,0 +1,16 @@
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Grade</th>
+		<th>Year</th>
+	</tr>
+	<tbody>
+		<% for classroom in classrooms %>
+			<tr>
+				<td><%= link_to classroom.name, school_classroom_path(classroom.school,classroom) %></td>
+				<td><%= classroom.grade %></td>
+				<td><%= classroom.year %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

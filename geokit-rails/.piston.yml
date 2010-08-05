@@ -1,0 +1,8 @@
+--- 
+format: 1
+handler: 
+  commit: 324231088b02d7c6d590333d2bb1645efad0274f
+  branch: master
+lock: false
+repository_class: Piston::Git::Repository
+repository_url: git://github.com/andre/geokit-rails.git

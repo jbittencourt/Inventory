@@ -1,0 +1,2 @@
+class LaptopsController < ApplicationController
+end

@@ -1,0 +1,20 @@
+<h1>Add Students to <%= @classroom.name %> at <%= @school.name %><h1>
+	<ul class="object-tools">
+		<li><%= link_to 'Back', school_path(@school) %></li>
+	</ul>
+
+
+<% rounded_titled_box "Classroom Info",:id=>'classroom-info' do |b| %>
+	<p><em>Designation:</em> <%= @classroom.name %> </p>
+	<p><em>Grade:</em> <%= @classroom.grade %> </p>
+	<p><em>Year:</em> <%= @classroom.year %> </p>
+<% end %>
+
+
+<div id="students-list">
+	<%  if not @school.teachers.blank? %>
+		<%= render :partial => "students/students_list", :locals => { :students => @classroom.students } %>
+	<% else %>
+		<%= yeld_error 	"No students registered in this school." %>
+	<% end %>
+<end>

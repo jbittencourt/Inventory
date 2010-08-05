@@ -1,0 +1,13 @@
+<div id="teacher-form">
+	<% form_remote_for([school,teacher]) do |f| %>
+	  <%= f.error_messages %>
+	  <%= hidden_field :teacher, :school_id %>
+	  <p><%= label_tag :name, "Full name"%> <%= f.text_field :name %></p>
+	  <p><%= label_tag :national_id, "National ID Number"%> <%= f.text_field :national_id %></p>
+	  <p><%= label_tag :date_of_birth_at_string, "Date of Birth"%> <%= f.text_field  :date_of_birth_at_string %></p>
+	  <p><%= label_tag :phone, "Phone"%> <%= f.text_field :phone %></p>
+	  <p>
+	    <%= f.submit 'Create' %>
+	  </p>
+	<% end %>
+</div>

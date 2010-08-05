@@ -1,0 +1,18 @@
+<table>
+	<tr>
+		<th>Name</th>
+		<th>National ID</th>
+		<th>Phone</th>
+		<th>Date of Birth</th>
+	</tr>
+	<tbody>
+		<% for teacher in teachers %>
+			<tr>
+				<td><%= teacher.name %></td>
+				<td><%= teacher.national_id %></td>
+				<td><%= teacher.phone %></td>
+				<td><%= teacher.date_of_birth %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

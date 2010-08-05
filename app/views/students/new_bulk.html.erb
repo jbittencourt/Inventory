@@ -1,0 +1,20 @@
+<h1>Add students in bulk to school <%= @school.name %></h1>
+
+<ul class="object-tools">
+	<li><%= link_to 'Back', school_path(@school) %></li>
+</ul>
+
+<% rounded_titled_box "Info",:id=>'school-info' do |b| %>
+	<p>This function will add a list of students to the school <%= @school.name %> . You will be required to upload a csv file containing the student's information. This csv file must has the following format:</p>
+	<pre>Name; Classroom; Mother's Name; Mother's ID; Responsible Name; Responsible's ID; Responsible's Kindship; Responsible's Phone; Date of Birth</pre>
+	
+	<p>The classroom must the a valid classroom with the exact name of the one registered in this school.</p>	
+	<p>After uploading the file, a review table will be exhibited for your review before final save operation<p>
+	
+	<% form_tag :action=>'process_bulk', :multipart => true do %>
+		<label for="file">CSV File to Upload</label> <%= file_field :students, :csv_file %>
+		<%= submit_tag "Upload"%>
+    <% end %>
+	
+<% end %>
+
