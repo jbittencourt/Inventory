@@ -1,0 +1,34 @@
+<table id="skus-table" class="large-table">
+	<tr>
+		<th>SKU</th>
+		<th>Activation Key</th>
+		<th>Keyboard Model</th>
+		<th>Keyboard Layout</th>
+		<th>Keyboard Variation</th>
+		<th>Localization</th>
+		<th>Keyboard ASCII</th>
+		<th>Country Code</th>
+		<th>Flash</th>
+		<th>Memory</th>
+		<th>Adapter</th>
+		<th>Comments</th>
+	</tr>
+	<tbody>
+		<% for sku in skus %>
+			<tr>
+				<td><%= sku.sku %></td>
+				<td><%= sku.activation_key %></td>
+				<td><%= sku.keyboard_model %></td>
+				<td><%= sku.keyboard_layout %></td>
+				<td><%= sku.keyboard_variation %></td>
+				<td><%= sku.localization %></td>
+				<td><%= sku.keyboard_ascii %></td>
+				<td><%= sku.country_code %></td>
+				<td><%= sku.memory %></td>
+				<td><%= sku.flash %></td>
+				<td><%= sku.adapter %></td>
+				<td><%= sku.comments %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

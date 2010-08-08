@@ -1,0 +1,88 @@
+1;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Developers, other
+2;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Developers, other
+3;Spanish keyboard;no;;olpc;es;olpc;es_MX.UTF-8;XO 1.0 CL1;es;;;1GB;256MB;Mexico/Peru
+4;Spanish keyboard;no;;olpc;es;olpc;es_MX.UTF-8;XO 1.0 CL1;es;;;1GB;256MB;Peru
+5;Spanish keyboard;no;;olpc;es;olpc;es_UY.UTF-8;XO 1.0 CL1;es;;;1GB;256MB;Uruguay, Paraguay
+6;Spanish keyboard;no;;olpc;es;olpc;es_UY.UTF-8;XO 1.0 CL1;es;;;1GB;256MB;Uruguay
+7;Arabic keyboard;yes;;olpc;us,ara;olpc2,olpc;ar_EG.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Iraq, Palestine, Egypt
+8;Thai keyboard;yes;;olpc;us,th;olpc2,olpc;th_TH.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Thailand
+9;Nigerian keyboard;yes;;olpc;ng;olpc;en_US.UTF-8;XO 1.0 CL1;us(?);;;1GB;256MB;(US/International keyboard only) for Igbo, Yoruba, and Hausa
+10;Portuguese keyboard;yes;;olpc;br;olpc;pt_BR.UTF-8;XO 1.0 CL1;pt;;;1GB;256MB;Brazil
+11;Amharic keyboard;no;;olpc;us,et;olpc2,basic;am_ET.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Ethiopia
+12;Urdu keyboard;yes;;olpc;us,pk;olpc2,olpc;ur_PK.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Pakistan
+13;Mongolian keyboard;yes;;olpc;us,mn;olpc2,olpc;mn_MN.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Mongolia
+14;Devanagari keyboard;yes;;olpc;us,in;olpc2,olpc;hi_IN.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;India
+15;Nepali keyboard;yes;;olpc;us,np;olpc2,olpc;ne_NP.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Nepal
+17;Portuguese keyboard;yes;;olpc;br;olpc;pt_BR.UTF-8;XO 1.0 CL1;pt;;;1GB;256MB;Brazil
+18;Spanish keyboard;no;;olpc;es;olpc;es_UY.UTF-8;XO 1.0 CL1;es;;;1GB;256MB;Uruguay
+19;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Developers, other
+20;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Alabama
+21;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Rwanda
+22;Dari keyboard;yes;;olpc;us,af;olpc2,fa-olpc;fa_AF.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Afghanistan
+23;Italian keyboard;yes;;olpc;it;olpc;it_IT.UTF-8;XO 1.0 CL1;it;;;1GB;256MB;Italy
+24;French Canadian keyboard;yes;;olpc;ca;olpc;ht_HT.UTF-8;XO 1.0 CL1;ht;;;1GB;256MB;KreyÚl for Haiti
+25;Khmer keyboard;yes;;olpc;us,kh;olpc2,olpc;km_KH.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Cambodia
+26;Spanish keyboard;yes;;olpc;es;olpc;es_UY.UTF-8;XO 1.0 CL1;es;;;1GB;256MB;Developers, General Spanish laptops
+27;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;
+28;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Nigeria
+30;Cyrillic keyboard;yes;;olpc;us,ru;olpc2,olpc;uk_UA.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;Russia
+34;Mongolian keyboard;yes;;olpc;us,mn;olpc2,olpc;mn_MN.UTF-8;XO 1.0 CL1;us;;;1GB;256MB;MS Mongolia
+35;Spanish keyboard;no;;olpc;es;olpc;es_MX.UTF-8?;XO 1.0 CL1A;es;;;1GB;256MB;MS Uruguay
+36;Thai keyboard;yes;;olpc;us;olpc;en_US.UTF-8?;XO 1.0 CL1;us;;;1GB;256MB;MS Thailand
+37;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1A;us;;;1GB;256MB;MS Rwanda
+38;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1A;us;;;1GB;256MB;MS South Africa
+39;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1A;us;;;1GB;256MB;Developers, other
+40;Spanish keyboard;no;;olpc;es;olpc;es_UY.UTF-8;XO 1.0 CL1A;es;;;1GB;256MB;Uruguay
+41;Arabic keyboard;yes;;olpc;us,ara;olpc2,olpc;ar_EG.UTF-8;XO 1.0 CL1A;us;;;1GB;256MB;
+42;Portuguese keyboard;yes;;olpc;br;olpc;pt_BR.UTF-8;XO 1.0 CL1A;pt;;;1GB;256MB;Brazil
+43;Mongolian keyboard;yes;;olpc;us,mn;olpc2,olpc;mn_MN.UTF-8;XO 1.0 CL1A;us;;;1GB;256MB;Mongolia
+44;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1A;us;;;1GB;256MB;Rwanda
+45;US International keyboard;yes;;olpc;us;olpc;en_GH.UTF-8;XO 1.0 CL1A;us;;;1GB;256MB;Ghana
+46;Nepali keyboard;yes;;olpc;us,np;olpc2,olpc;ne_NP.UTF-8;XO 1.0 CL1A;us;;;1GB;256MB;Nepal
+47;Spanish keyboard;no;;olpc;es;olpc;es_MX.UTF-8;XO 1.0 CL1A;es;;;1GB;256MB;Peru
+48;Spanish keyboard;yes;;olpc;es;olpc;es_MX.UTF-8;XO 1.0 CL1A;es;;;1GB;256MB;MS Peru, MS Colombia
+49;Spanish keyboard;yes;;olpc;es;olpc;es_UY.UTF-8;XO 1.0 CL1A;es;;;1GB;256MB;MS Uruguay
+50;Thai keyboard;yes;;olpc;us;olpc;en_US.UTF-8?;XO 1.0 CL1;us;;;1GB;256MB;MS Thailand
+51;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1A;us;;;1GB;256MB;MS Rwanda
+52;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1A;us;;;1GB;256MB;MS South Africa
+55;Spanish keyboard;no;;olpc;es;olpc;es_NI.UTF-8;XO 1.0 CL1A;es;NIC;;1GB;256MB;Nicaragua (new TP)
+56;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1A;us;PNG;;1GB;256MB;Oceania
+57;Spanish keyboard;no;;olpc;es;olpc;es_NI.UTF-8;XO 1.0 CL1;es;NIC;;1GB;256MB;Nicaragua (old TP, not manufactured but field-updated)
+58;Dari keyboard;yes;;olpc;us,af;olpc2,fa-olpc;fa_AF.UTF-8;XO 1.0 CL1A;us;AFG;;1GB;256MB;Afghanistan
+59;Spanish keyboard;no;;olpc;es;olpc;es_CO.UTF-8;XO 1.0 CL1A;es;COL;;1GB;256MB;Colombia
+60;US International keyboard;yes;;olpc;us;olpc;en_SZ.UTF-8;XO 1.0 CL1A;us;SWZ;;1GB;256MB;Swaziland
+61;Arabic keyboard;yes;;olpc;us,ara;olpc2,olpc;ar_IQ.UTF-8;XO 1.0 CL1A;us;IRQ;;1GB;256MB;Iraq
+62;US International keyboard;yes;;olpc;us;olpc;en_US.UTF-8;XO 1.0 CL1A;us;GRC;;1GB;256MB;Greece - EU Adapter
+63;Azerty keyboard;yes;;olpc;fr;olpc;fr_ML.UTF-8;XO 1.0 CL1A;azerty;RMM;;1GB;256MB;Mali-EU
+64;Azerty keyboard;yes;;olpc;fr;olpc;fr_BI.UTF-8;XO 1.0 CL1A;azerty;BDI;;1GB;256MB;Burundi-EU
+65;Portuguese keyboard;yes;;olpc;br;olpc;pt_MZ.UTF-8;XO 1.0 CL1A;pt;MOZ;;1GB;256MB;Mozambique-EU
+66;Spanish keyboard;yes;;olpc;es;olpc;es_SV.UTF-8;XO 1.0 CL1A;es;SLV;;1GB;256MB;El Salvador - US Power Adapter
+67;US International keyboard;yes;;olpc;us;olpc;en_AU.UTF-8;XO 1.0 CL1A;us;AUS;;1GB;256MB;Australia - No Power Adapter
+68;US International keyboard;yes;;olpc;us;olpc;en_IT.UTF-8;XO 1.0 CL1A;us;ITA;;1GB;256MB;Italy-EU Adapter
+98;US International keyboard;yes;ww;olpc;us;olpc;en_US.UTF-8;XO 1.5 CL1B;us;;US wall;4 GB;1 GB;Developers, other
+99;US International keyboard;yes;ww;olpc;us;olpc;en_US.UTF-8;XO 1.5 CL1B;us;;none;4 GB;1 GB;other (5-pack)
+100;US International keyboard;yes;ww;olpc;us;olpc;en_US.UTF-8;XO 1.5 CL1B;us;USA;US brick;4 GB;1 GB;Developers, other
+101;Spanish keyboard;no;wp;olpc;es;olpc;es_AR.UTF-8;XO 1.5 CL1B;es;ARG;AR wall;4 GB;1 GB;Argentina;http://dev.laptop.org/~reuben/arg/
+102;Spanish keyboard;no;wp;olpc;es;olpc;es_MX.UTF-8;XO 1.5 CL1B;es;PER;US wall;2 GB;512 MB;Peru;http://dev.laptop.org/~reuben/per/
+103;Spanish keyboard;no;wp;olpc;es;olpc;es_CO.UTF-8;XO 1.5 CL1B;es;COL;US wall;4 GB;1 GB;Colombia;
+104;US International keyboard;yes;ww;olpc;us;olpc;en_AU.UTF-8;XO 1.5 CL1B;us;AUS; NONE;4 GB;1 GB;Australia;
+105;Spanish keyboard;no;wp;olpc;es;olpc;es_MX.UTF-8;XO 1.5 CL1B;es;MEX;US wall;4 GB;1 GB;Mexico;
+106;US International keyboard;yes;ww;olpc;us;olpc;en_ID.UTF-8;XO 1.5 CL1B;us;IDN;EU wall;4 GB;1 GB;Indonesia;
+107;Portuguese keyboard;yes;ww;olpc;br;olpc;pt_BR.UTF-8;XO 1.5 CL1B;pt;BRA;US wall;4 GB;1 GB;Brazil;
+108;US International keyboard;yes;ww;olpc;us;olpc;en_CA.UTF-8;XO 1.5 CL1B;us;CAN;US wall;4 GB;1 GB;Canada;
+109;US International keyboard;yes;ww;olpc;us;olpc;en_PH.UTF-8;XO 1.5 CL1B;us;PHL;US wall;4 GB;1 GB;Philippines;
+110;US International keyboard;yes;ww;olpc;us;olpc;en_AN.UTF-8;XO 1.5 CL1B;us;ANT;US wall;4 GB;1 GB;Netherlands Antilles;
+111;US International keyboard;yes;ww;olpc;us;olpc;en_NL.UTF-8;XO 1.5 CL1B;us;NLD;EU wall;4 GB;1 GB;Netherlands;
+112;US International keyboard;yes;ww;olpc;us;olpc;en_US.UTF-8;XO 1.5 CL1B;us;USA;EU wall;4 GB;1 GB;OLPC EU Developers;
+113;African AZERTY keyboard;yes;ww;olpc;fr;olpc;;XO 1.5 CL1B;;;EU brick;4 GB;1 GB;Francophone Africa;
+114;Spanish keyboard;no;wp;olpc;es;olpc;es_NI.UTF-8;XO 1.5 CL1B;es;NIC;US wall;4 GB;1 GB;Nicaragua -- Custom Image: http://dev.laptop.org/~dsd/nic-xo1.5-costa/;http://dev.laptop.org/~reuben/nic/
+115;Spanish keyboard;no;wp;olpc;es;olpc;es_UY.UTF-8;XO 1.5 CL1B;es;URY;EU wall;2 GB;512 MB;Uruguay;http://dev.laptop.org/~reuben/UY/
+116;Spanish HS KB;no;wp;olpcm;es;olpc;es_UY.UTF-8;XO 1.5 CL1C;es;URY;EU wall;4 GB;1 GB;Uruguay;http://dev.laptop.org/~reuben/UY/
+117;Spanish keyboard;no;wp;olpc;es;olpc;es_MX.UTF-8;XO 1.5 CL1B;es;PER;US wall;4 GB;512 MB;Peru;http://dev.laptop.org/~reuben/per/
+118;Arabic keyboard;yes;ww;olpc;us,ara;olpc2,olpc;ar_SY.UTF-8;XO 1.5 CL1B;us;SYR;EU wall;4 GB;1 GB;Palestinian Territories, others;
+119;Azerty keyboard;yes;ww;olpc;us;olpc;fr_SN.UTF-8;XO 1.5 CL1B;us;SEN;EU wall;4 GB;1 GB;Senegal;
+120;US International keyboard;yes;ww;olpc;us;olpc;en_JM.UTF-8;XO 1.5 CL1B;us;JAM;US wall;4 GB;1 GB;Jamaica;
+121;Spanish HS KB;no;wp;olpcm;es;olpc;es_UY.UTF-8;XO 1.5 CL1C;es;URY;EU wall;8 GB;1 GB;Uruguay;http://dev.laptop.org/~reuben/UY/
+122;US International keyboard;yes;ww;olpc;us;olpc;en_BB.UTF-8;XO 1.5 CL1B;us;BRB;US wall;4 GB;1 GB;Barbados;
+123;US International keyboard;yes;ww;olpc;us;olpc;en_FM.UTF-8;XO 1.5 CL1B;us;FSM;US wall;4 GB;1 GB;Micronesia;
+124;Dari keyboard;yes;ww;olpc;us,af;olpc2,fa-olpc;fa_AF.UTF-8;XO 1.5 CL1B;us;AFG;EU wall;4 GB;1 GB;Afghanistan;Dari or Pashto?

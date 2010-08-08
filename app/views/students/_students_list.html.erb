@@ -1,4 +1,4 @@
-<table>
+<table id="students-table" class="large-table">
 	<tr>
 		<th>Name</th>
 		<th>Date of Birth</th>
@@ -9,20 +9,23 @@
 		<th>Responsible's National ID</th>
 		<th>Responsible's Phone</th>
 		<th>Responsible's Kindship</th>
-
+		<th>Laptop Serial Number</th>
 	</tr>
 	<tbody>
 		<% for student in students %>
 			<tr>
 				<td><%= student.name %></td>
 				<td><%= student.date_of_birth %></td>
-				<td><%= student.classrooms.first unless student.classrooms.blank? %></td>
-				<td><%= student.mother %></td>
+				<td><%= student.classroom.name unless student.classroom.blank?  %></td>
+				<td><%= student.mother_name %></td>
 				<td><%= student.mother_national_id %></td>
-				<td><%= student.responsible %></td>
+				<td><%= student.responsible_name %></td>
 				<td><%= student.responsible_national_id %></td>
-				<td><%= student.responsible_kindship %></td>
+				<td><%= student.responsible_kinship %></td>
 				<td><%= student.phone %></td>
+				<td>
+					<%= student.laptop.serial_number unless student.laptop==nil %>
+				</td>
 			</tr>
 		<% end %>
 	</tbody>

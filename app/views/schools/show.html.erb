@@ -6,10 +6,7 @@
 </ul>
 
 <% rounded_titled_box "School Info",:id=>'school-info' do |b| %>
-	<p><em>Name:</em> <%= @school.name %> </p>
-	<p><em>Longitude:</em> <%= @school.longitude %> </p>
-	<p><em>Latitude:</em>  <%= @school.latitude %> </p>	
-	<p><em>Declared Number of students:</em>  <%= @school.number_of_students %> </p>	
+	<%= render :partial => "schools/school_info", :locals => { :school => @school } %>
 <% end %>
 
 <div class="clear"></div>
@@ -45,7 +42,7 @@
 		<li><%= link_to 'Load Students in Bulk', {:controller=>school_students_path(@school),:action=>"new_bulk"} , :class=>"addlink" %></li>
 	</ul>
 	<%  if not @school.students.blank? %>
-		<p><em>Number of Registered Students:</em> <%= @school.students.size %></p>
+		<p><em>Number of Registered Students:</em> <%= link_to @school.students.size, school_students_path(@school) %></p>
 	<% else %>
 		<%= yeld_error 	"No students registered in this school." %>
 	<% end %>		

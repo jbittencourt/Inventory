@@ -1,5 +1,9 @@
 <h1>New School</h1>
 
+<ul class="object-tools">
+	<li><%= link_to 'Back', schools_path %></li>
+</ul>
+
 <% form_for(@school) do |f| %>
   <%= f.error_messages %>
 
@@ -13,4 +17,3 @@
   </p>
 <% end %>
 
-<%= link_to 'Back', schools_path %>

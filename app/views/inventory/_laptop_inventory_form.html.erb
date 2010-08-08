@@ -1,0 +1,17 @@
+<% form_tag ({:action => 'attribute_laptop'}, :id=>"form_owner_#{cont}") do %>
+	<div id=<%= "owner_#{owner.id}_form_error"%> class="errors"></div>
+	<%= hidden_field_tag "owner_id", owner.id %>
+	<% fn = remote_function(:url=> {:action=>'attribute_laptop'},:html => {:id=>"form_owner_#{cont}"} ,
+	:update => { :success => "owner_#{owner.id}_form", :failure => "owner_#{owner.id}_form_error"},
+	:before => "$('spinner_#{cont}').show();",
+	:with => "'owner_id='+$('form_owner_#{cont}')['owner_id'].getValue()+'&serial_number='+$('form_owner_#{cont}')['serial_number'].getValue()+'&cont=#{cont}&owner_type=#{owner_type}'",
+	:complete => "$('spinner_#{cont}').hide()",
+	:failure => "$('form_owner_#{cont}')['serial_number'].focus()") %>
+	
+	
+	<script type="text/javascript"> callback_functions[<%= cont %>] = function() {<%= fn %>}; </script>
+	<%= text_field_tag "serial_number","", { :name=>"sn",:maxlength=>11, 
+		:onkeyup=>"inventoryNextField(#{cont})", :size=>11, :autocomplete=>'off' }
+		 %> <%= spinner :id=>"spinner_#{cont}" %>
+
+<% end %>

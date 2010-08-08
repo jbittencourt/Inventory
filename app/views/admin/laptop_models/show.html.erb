@@ -1,4 +1,7 @@
 <h1>Laptop Model</h1>
+<ul class="object-tools">
+	<li><%= link_to 'Back', admin_root_path %></li>
+</ul>
 
 <% rounded_box :id=>'laptop-models-picture' do |b| %>
 	<%= image_tag @laptop_model.picture.url(:big) %>
@@ -7,3 +10,11 @@
 
 <p><em>Name:</em> <%= @laptop_model.name %> </p>
 <p><em>Manufacturer:</em> <%= @laptop_model.manufacturer %> </p>
+
+<div class="clear"></div>
+
+<% if ! @laptop_model.skus.blank? %>
+	<% rounded_titled_box "SKUs",:id=>'skus-list' do |b| %>
+		<%= render :partial => "skus_list", :locals => { :skus => @laptop_model.skus } %>
+	<% end %>
+<% end %>

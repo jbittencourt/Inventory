@@ -1,0 +1,26 @@
+<h1>List Laptop Boxes</h1>
+<ul class="object-tools">
+	<li><%= link_to 'Back', laptops_path %></li>
+</ul>
+
+<table id="boxes-table">
+	<tr>
+		<th>#</th>
+		<th>Box ID</th>
+		<th>Laptops</th>
+	</tr>
+	<tbody>
+		<%  i=0 %>
+		<%	for box in @boxes %>
+			<% i = i+1 %>
+			<tr>
+				<td><%= i %></td>
+				<td><%= box.id %></td>
+				<td><% for laptop in  box.laptops do  %>
+						<%= laptop.serial_number+' '%>
+					<% end %>
+					</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

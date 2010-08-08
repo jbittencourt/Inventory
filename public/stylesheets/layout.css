@@ -15,43 +15,138 @@
 .subcol { float:left; width:46%; margin-right:15px; }
 .dashboard #content { width:500px; }
 
+
 /* Primary Meny */
 
 #primary_menu {
-    width: 100%;
-    border: 0;
-    color: #417690;
-    border-bottom: 1px solid #417690;
-    margin-bottom: 0.3em;
-    margin-top: 0.3em;
-    padding-left: 0.5em;
+    position: absolute;
+    top: 1px;
+    right: 20px;
+    background: url("/images/bar-left.png") no-repeat scroll 0 0 transparent;
+    float: right;
+    font-size: 12px;
+    height: 39px;
+    padding-left: 6px;
+}
+
+#primary_menu a {
+    color: #4183C4;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#primary_menu a:visited {
+    color: #4183C4;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #primary_menu a:hover {
-    font-weight: bold;
+    text-decoration: underline;
+    background: transparent;
 }
 
+#primary_menu_inner {
+    background: url("/images/bar-right.png") no-repeat scroll 100% 0 transparent;
+    height: 29px;
+    padding: 10px 12px 0 6px;
+}
+
+
 #primary_menu ul {
+    display: inline;
     padding: 0;
 }
 
 #primary_menu li {
     display: inline;
     list-style-type: none;
-    margin: 5px;
-    margin-right: 2em;
+    margin: 0;
+    padding: 0 0 0 15px;
     font-size: 100%;
+    background: url("/images/bar_separator.gif") no-repeat scroll 5px 0 transparent
+}
+
+#primary_menu li a {
+    text-shadow: 1px 1px 0 #FFFFFF
 }
 
 /*  HEADER  */
-#header { background:#417690; color:#ffc; overflow:hidden; }
-#header a:link, #header a:visited { color:white; }
-#header a:hover { text-decoration:underline; }
-#branding h1 { padding:0 10px; font-size:18px; margin:8px 0; font-weight:normal; color:#f4f379; }
-#branding h2 { padding:0 10px; font-size:14px; margin:-8px 0 8px 0; font-weight:normal; color:#ffc; }
+#header { 
+    background: url("/images/header_bg.gif") repeat-x scroll 0 100% #FCFCFC; 
+    color:#ffc; 
+    overflow:hidden; 
+
+    height: 115px;
+}
+
+#username {
+    display: inline;
+    color: black;
+}
+
+#username a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#username a:visited {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#username a:hover {
+    text-decoration: underline;
+    background: transparent;
+}
+
+#branding {
+    margin-top: 20px;
+}
+
+#branding h1 { 
+    padding:0 10px; 
+    font-size:180%;
+     margin:8px 0; 
+     font-weight:bold; 
+     color: black; 
+     }
+     
+#branding h2 { 
+    padding:0 10px; 
+    font-size:140%; 
+    margin:8px 0 8px 0; 
+    font-weight:normal; 
+    color:black;
+    
+     }
 #user-tools { position:absolute; top:0; right:0; padding:1.2em 10px; font-size:11px; text-align:right; }
+
+#xos-logo {
+    margin: 5px;
+    float: left;
+}
 
 /* SIDEBAR */
 #content-related h3 { font-size:12px; color:#666; margin-bottom:3px; }
 #content-related h4 { font-size:11px; }
 #content-related .module h2 { background:#eee url(/images/nav-bg.gif) bottom left repeat-x; color:#666; }
+
+
+
+
+/* LAYOUT */
+
+#layout-column-left {
+    margin-left: 2.5%;
+    width: 45%;
+    float: left;
+}
+
+#layout-column-right {
+    margin-right: 2.5%;
+    width: 45%;
+    float: right;
+}

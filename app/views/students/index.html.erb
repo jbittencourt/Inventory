@@ -1,0 +1,6 @@
+<h1>List students for School <%= @school.name %></h1>
+<ul class="object-tools">
+	<li><%= link_to 'Back', school_path(@school) %></li>
+</ul>
+	
+<%= render :partial => "students_list", :locals => { :students => @students, :data_invalid => @errors } %>

@@ -1,4 +1,11 @@
-body { margin:0; padding:0; font-size:12px; font-family:"Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif; color:#333; background:#fff; }
+body { 
+    margin:0; 
+    padding:0; 
+    font-size:12px; 
+    font-family: 13.34px helvetica,arial,freesans,clean,sans-serif; 
+    color:#333; 
+    background:#fff; 
+}
 
 /* LINKS */
 a:link, a:visited { color: #5b80b2; text-decoration:none; }
@@ -11,7 +18,7 @@ p, ol, ul, dl { margin:.2em 0 .8em 0; }
 p { padding:0; line-height:140%; }
 
 h1,h2,h3,h4,h5 { font-weight:bold; }
-h1 { font-size:18px; color:#666; padding:0 6px 0 0; margin:0 0 .2em 0; }
+h1 { font-size:18px; color:#666; padding:0 6px 0 0; margin:0 0 1em 0; }
 h2 { font-size:16px; margin:1em 0 .5em 0; }
 h2.subhead { font-weight:normal;margin-top:0; }
 h3 { font-size:14px; margin:.8em 0 .3em 0; color:#666; font-weight:bold; }
@@ -87,10 +94,17 @@ textarea { vertical-align:top !important; }
 input[type=text], input[type=password], textarea, select, .vTextField { border:1px solid #ccc; }
 
 /*  FORM BUTTONS  */
-input[type=submit], input[type=button], .submit-row input { background:white url(/images/nav-bg.gif) bottom repeat-x; padding:3px; color:black; border:1px solid #bbb; border-color:#ddd #aaa #aaa #ddd; }
+input[type=submit], input[type=button], .submit-row input { 
+    background:white url(/images/nav-bg.gif) bottom repeat-x; 
+    padding:3px; color:black; 
+    border:1px solid #bbb; 
+    border-color:#ddd #aaa #aaa #ddd; 
+    }
+
 input[type=submit]:active, input[type=button]:active { background-image:url(/images/nav-bg-reverse.gif); background-position:top; }
 input[type=submit].default, .submit-row input.default { border:2px solid #5b80b2; background:#7CA0C7 url(/images/default-bg.gif) bottom repeat-x; font-weight:bold; color:white; float:right; }
 input[type=submit].default:active { background-image:url(/images/default-bg-reverse.gif); background-position:top; }
+input[type=submit]:disabled { background-image: none ; color: #5b80b2 ;}
 
 /* MODULES */
 .module { border:1px solid #ccc; margin-bottom:5px; background:white; }
@@ -148,4 +162,22 @@ table#change-history tbody th { width:16em; }
 	border: 2px dashed #c00;
 	padding: 5px;
 	margin: 10px ;
+}
+
+
+/* special boxes */
+.search-box input.search {
+    background: url("/images/search_field.gif") no-repeat scroll 0 -22px transparent;
+    border: medium none;
+    height: 16px;
+    width: 149px;
+    padding: 4px 10px 2px 21px;
+}
+
+.auto_complete li {
+    list-style-type: none;
+}
+
+.spinner {
+    display: none;
 }

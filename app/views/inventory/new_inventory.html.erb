@@ -1,0 +1,30 @@
+<h1>Inventory Laptops</h1>
+
+<ul class="object-tools">
+	<li><%= link_to 'Back', laptops_path %></li>
+</ul>
+
+
+<% form_for(:school, :url=>{:action=>'inventory'}) do |f| %>
+  <%= f.error_messages %>
+
+  <p><%= label_tag :districts, "Districts" %> <%= f.select :district_id, @districts.collect {|c| [ c.name, c.id ]} %></p>
+
+	<%= observe_field "school_district_id", :update => "school_id",
+			:with => "school_district_id", :url => { :controller => "inventory",
+			:action => "get_schools" } %>
+
+  <p><%= label_tag :schools, "Schools" %> <%= f.select :id, [] %>  <span id="classroom_error" class="errors"></span></p>	
+
+	<%= observe_field "school_id", :update => "school_classroom_id",
+			:with => "school_id", 
+			:url => { :controller => "inventory", :action => "get_classrooms"},
+			:success => "$('school_submit').enable();"  %>
+
+  <p>
+     <%= label_tag :classroom, "Classroom" %> <%= f.select :classroom_id, [] %> </p>	
+
+  <p>
+    <%= f.submit 'Select',:disabled=>'disabled' %>
+  </p>
+<% end %>

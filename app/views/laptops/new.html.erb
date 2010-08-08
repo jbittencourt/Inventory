@@ -1,0 +1,23 @@
+<h1>Add Laptops</h1>
+
+<ul class="object-tools">
+	<li><%= link_to 'Back', laptops_path %></li>
+</ul>
+
+<% rounded_titled_box "Info",:id=>'laptops-info' do |b| %>
+	<p>This function will add to the system a group of laptops from the OLPC shipment manifest. This csv file must have the following format:</p>
+	<pre>Shipment;	Pallet ID;	Box ID;	 Serial Number; 	 Climat; 	UUID</pre>
+	
+	<p>Please notice that boxes will be automatically created if not exiting</p>	
+	<p>After uploading the file, a review table will be exhibited for your review before final save operation<p>
+	
+	<% form_for :laptop, :url => process_file_laptops_path, :html =>  {:multipart=>true}  do |f| %>
+		<p><%= label_tag :status, "Status"%>
+	 		<%= f.select(:status, options_from_collection_for_select( @status, 'id', 'name') ) %>
+  		</p>
+		
+		<label for="file">CSV File to Upload</label> <%= f.file_field  :csv_file %>
+		<%= submit_tag "Upload"%>
+    <% end %>
+	
+<% end %>

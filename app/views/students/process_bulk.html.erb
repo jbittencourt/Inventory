@@ -1,0 +1,19 @@
+<h1>List of students to be added to <%= @school.name %></h1>
+
+<ul class="object-tools">
+	<li><%= link_to 'Back', school_path(@school) %></li>
+</ul>
+
+<% rounded_titled_box "Info",:id=>'school-info' do |b| %>
+	<% if !@errors %>
+		Your data seems to be valid. Please double-check all the items in the table bellow . After making sure everything is fine, please click on the Proceed button.
+		
+		<p class="centralized"><%= link_to 'Proceed', create_bulk_school_students_path(@school), :class=>"big-button" %></p>
+	<% else %>
+		<p >There are errors in your CVS file that prevented it to be correctly processed. Please noticed in the lines above the red lines and pay attention to the last column.
+			</p>
+	<% end %>
+<% end %>
+
+
+<%= render :partial => "students_review_list", :locals => { :students => @students, :data_invalid => @errors } %>

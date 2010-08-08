@@ -6,13 +6,13 @@
 
 <% rounded_titled_box "Info",:id=>'school-info' do |b| %>
 	<p>This function will add a list of students to the school <%= @school.name %> . You will be required to upload a csv file containing the student's information. This csv file must has the following format:</p>
-	<pre>Name; Classroom; Mother's Name; Mother's ID; Responsible Name; Responsible's ID; Responsible's Kindship; Responsible's Phone; Date of Birth</pre>
+	<pre>Name; Classroom; Mother's Name; Mother's ID; Responsible Name; Responsible's ID; Responsible's Kinship; Responsible's Phone; Date of Birth</pre>
 	
-	<p>The classroom must the a valid classroom with the exact name of the one registered in this school.</p>	
+	<p>The classroom must the a valid classroom with the exact name of the one registered in this school. If the system finds two different classrooms with the same designation inside the school, it will automatically select the most recent classroom (defined by the year field)</p>	
 	<p>After uploading the file, a review table will be exhibited for your review before final save operation<p>
 	
-	<% form_tag :action=>'process_bulk', :multipart => true do %>
-		<label for="file">CSV File to Upload</label> <%= file_field :students, :csv_file %>
+	<% form_for [@school,Student.new], :url => process_bulk_school_students_path, :html =>  {:multipart=>true}  do |f| %>
+		<label for="file">CSV File to Upload</label> <%= f.file_field  :csv_file %>
 		<%= submit_tag "Upload"%>
     <% end %>
 	

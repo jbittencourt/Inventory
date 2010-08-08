@@ -1,0 +1,20 @@
+
+
+<table id="laptops-table">
+	<tr>
+		<th>UUID</th>
+		<th>Serial Number</th>
+		<th>Box ID</th>
+		<th>SKU</th>
+	</tr>
+	<tbody>
+		<% for laptop in laptops %>
+			<tr class="<%= laptop.invalid? ? 'laptop-error' : ''  %>">
+				<td><%= laptop.id %></td>
+				<td><%= laptop.serial_number %></td>
+				<td><%= laptop.box.id %></td>
+				<td><%= laptop.sku.sku %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

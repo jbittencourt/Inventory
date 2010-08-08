@@ -1,0 +1,24 @@
+<h1>Laptops</h1>
+
+
+<ul class="object-tools">
+	<li><%= link_to 'Load laptops manifest', new_laptop_path, :class=>"addlink" %></li>
+	<li><%= link_to 'Inventory', {:controller => 'inventory', :action=>'new_inventory'} , :class=>"addlink" %></li>
+</ul>
+<br/>
+<div id="layout-column-left">
+	<div class="search-box">
+		<% form_remote_for :laptop, :url => { :action => "track" } do |f| %>
+			<%= f.label :search, "Track a laptop" %> <%= f.text_field :serial_number, :class=>"search" %>
+		<% end %>
+	</div>
+	<div id='laptop-search-result'>
+	</div>
+</div>
+
+<div id="layout-column-right">
+	<% rounded_titled_box "Info",:id=>'laptops-info' do |b| %>
+		<p>Laptops registered: <%= Laptop.count %></p>
+		<p>Boxes registered: <%= link_to Box.count, {:controller=>'laptops',:action=>'list_boxes'} %></p>
+	<% end %>
+</div>

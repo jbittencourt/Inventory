@@ -4,6 +4,7 @@
 		<th>National ID</th>
 		<th>Phone</th>
 		<th>Date of Birth</th>
+		<th>Laptop</th>
 	</tr>
 	<tbody>
 		<% for teacher in teachers %>
@@ -12,6 +13,7 @@
 				<td><%= teacher.national_id %></td>
 				<td><%= teacher.phone %></td>
 				<td><%= teacher.date_of_birth %></td>
+				<td><%= teacher.laptop.serial_number unless teacher.laptop==nil  %></td>
 			</tr>
 		<% end %>
 	</tbody>

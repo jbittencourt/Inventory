@@ -1,0 +1,41 @@
+<h1>Inventory Students for Class <%= @classroom.name %> of school <%= @classroom.school.name %></h1>
+<ul class="object-tools">
+	<li><%= link_to 'Back', laptops_path %></li>
+</ul>
+
+<% rounded_titled_box "School Info",:id=>'school-info' do |b| %>
+	<%= render :partial => "schools/school_info", :locals => { :school => @school } %>
+<% end %>
+
+<table id="students-table" class="large-table">
+	<tr>
+		<th>Name</th>
+		<th>Mother</th>
+		<th>Mother's National ID</th>
+		<th>Laptop Serial Number</th>
+	</tr>
+	<tbody>
+		<% i = 0%>
+		<% for student in @classroom.students %>
+			<% i = i+1 %>
+			<tr>
+				<td><%= student.name %></td>
+				<td><%= student.mother_name %></td>
+				<td><%= student.mother_national_id %></td>
+				<td >
+					<div id="<%= "owner_#{student.id}_form" %>">
+						<% if student.laptop == nil %>
+							<%= render :partial => "laptop_inventory_form", :locals => { :owner_type => 'student', :owner => student, :cont=>i } %>
+						<% else %>
+							<%= render :partial => "laptop_inventory_item", :locals => { :owner_type => 'student', :owner => student, :cont=>i } %>
+						<% end %>
+					</div>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+
+
+

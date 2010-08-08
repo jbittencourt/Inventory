@@ -1,0 +1,5 @@
+<em><%= owner.laptop.serial_number %> <%= delete_remote_button(:url=>{:action=>'unlink_laptop'},
+													:with => "'owner_id=#{owner.id}&cont=#{cont}&owner_type=#{owner_type}'",
+													:update => "owner_#{owner.id}_form",
+													:confirm => "Are you sure you wan't to unlink laptop #{owner.laptop.serial_number} from user #{owner.name}?"  )
+		%></em>

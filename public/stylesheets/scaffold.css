@@ -52,3 +52,69 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 
+
+
+em {
+    color: #3f81a0;
+    font-weight: bold;
+}
+
+pre {
+    margin-left: 2em;
+    margin-right: 2em;
+    border: 2px dashed #dededc;
+}
+
+label {
+    color: #3f81a0;
+    font-weight: bold;   
+}
+
+
+ul li {
+    font-size: 100%;
+    list-style-type: disc;
+}
+
+#laptop-models-picture {
+    float: left;
+    margin-left: 15px;
+}
+
+.laptop-status-severity {
+    margin: 0 1em 0 1em;
+    color: #935156;
+    font-size: 90%;
+}
+
+.button-edit {
+    font-size: 80%;
+    font-weight: bold;
+    color: #4d725c !important;
+    padding: 1px 3px 1px 3px;
+	background-color: #f5f5f3;
+	border: 2px solid #e5e5e4;	
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+
+.centralized {
+    text-align: center;
+}
+
+.big-button {
+    font-size: 120%;
+    font-weight: bold;
+    color: #4d725c !important;
+    padding: 1px 3px 1px 3px;
+	background-color: #f5f5f3;
+	border: 2px solid #e5e5e4;	
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;  
+}
+
+#school_sector_auto_complete  li {
+    list-style-type: none;
+}
+
+

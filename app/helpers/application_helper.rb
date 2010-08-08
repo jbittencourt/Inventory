@@ -26,5 +26,14 @@ module ApplicationHelper
     block_to_partial('shared/rounded_box', options, &block)
   end
   
+  def spinner(options = {})
+    options.merge!({:class=> 'spinner', :class=>'spinner'})
+    image_tag('spinner.gif', options)
+  end
+  
+  
+  def delete_remote_button(options)
+    link_to_remote(image_tag('delete-16.png'),options)
+  end
   
 end
