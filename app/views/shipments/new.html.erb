@@ -1,0 +1,26 @@
+<h1>Ship Laptops</h1>
+
+<ul class="object-tools">
+	<li><%= link_to 'Back', laptops_path %></li>
+</ul>
+
+
+<% form_for(@shipment) do |f| %>
+  <%= f.error_messages %>
+
+  <p><%= label_tag :district_id, "Districts" %> <%= select_tag :district_id, options_from_collection_for_select(@districts,:id,:name) %></p>
+
+	<%= observe_field "district_id", :update => "shipment_school",
+			:with => "district_id", :url => get_schools_shipments_path ,
+			:success => "$('shipment_submit').enable();" %>
+
+  <p><%= label_tag :school_id, "Schools" %> <span id='shipment_school'><%= f.select :school_id, [] %></span></span></p>	
+
+  <p><%= label_tag :laptop_status_id, "Status after Shipment" %> <%= select_tag :laptop_status_id, options_from_collection_for_select(@status,:id,:name) %> </p>
+  <p><%= label_tag :responsible, "Responsible Person" %> <%= f.text_field :responsible %> </p>
+  
+
+  <p>
+    <%= f.submit 'Select',:disabled=>'disabled' %>
+  </p>
+<% end %>

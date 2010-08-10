@@ -1,0 +1,41 @@
+<h1>Shipment to <%= @shipment.school.name %></h1>
+
+<br/>
+
+<div id="layout-column-left">
+	<div class="add-laptop-box">
+		<% form_remote_tag :url => add_laptop_shipments_path ,:html=>{:id=>'add_laptop'} do |f| %>
+			<%= hidden_field_tag "shipment_id", @shipment.id %>
+			<%= label_tag :serial_number, "Add laptop" %> <%= text_field_tag :serial_number, nil, {:class=>"search", :maxlength=>11, :onkeyup=>"shipmentSubmit('add_laptop','serial_number')" } %>
+		<% end %>
+	</div>
+</div>
+
+<div id="layout-column-right">
+	<div class="add-laptop-box">
+		<% form_remote_tag :url => add_box_shipments_path, :html=>{:id=>'add_box'}  do |f| %>
+			<%= hidden_field_tag "shipment_id", @shipment.id %>
+			<%= label_tag :box_id, "Add a Box" %> <%= text_field_tag :box_id, nil, {:class=>"search", :maxlength=>16, :onkeyup=>"shipmentSubmit('add_box','box_id')" } %>
+		<% end %>
+	</div>	
+</div>
+
+
+<table id="laptops-table" class="large-table">
+	<tr>
+		<th>Box ID</th>
+		<th>Serial Number</ht>
+		<th>Name</th>
+		<th>Type</th>
+	</tr>
+	<tbody>
+		<% for laptop in @laptops %>
+			<tr id='<%= "laptop_#{laptop.id}" %>'>
+				<td><%= laptop.box.id %></td>
+				<td><%= laptop.serial_number %></td>				
+				<td><%= laptop.owner.name %></td>
+				<td><%= laptop.owner.type %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
