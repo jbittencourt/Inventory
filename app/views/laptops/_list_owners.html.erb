@@ -1,0 +1,26 @@
+<table id="owners-table" class="large-table">
+	<tr>
+		<th>Name</th>
+		<th>Type</th>
+		<th>School</th>
+		<th>Phone</th>
+		<th>Status</th>
+	</tr>
+	<tbody>
+		<% for rel in owners %>
+			<tr>
+				<td><%= rel.owner.name %></td>
+				<td><%= rel.owner_type %></td>
+				<td><%= rel.owner.school.name unless rel.owner.school.blank?  %></td>
+				<td><%= rel.owner.phone %></td>
+				<td> 
+				<% if not rel.finished  %>
+					<em>Current</em>
+				<% else %>
+					<%= rel.finished_at.strftime("Finished at <span class='bold'>%d/%m/%Y</span>")+ " with message <span class='bold'>#{rel.finished_message}</span>" %>
+				<% end %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

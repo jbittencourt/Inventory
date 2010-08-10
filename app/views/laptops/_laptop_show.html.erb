@@ -1,0 +1,10 @@
+<% rounded_titled_box "Laptop Information",:id=>'laptops-search' do |b| %>
+	<p><em>UUID: </em> <%= link_to @laptop.id, laptop_path(@laptop) %></p>
+	<p><em>Serial Number: </em> <%= link_to  @laptop.serial_number, laptop_path(@laptop) %></p>
+	<p><em>Box ID </em> <%= @laptop.box_id %></p>
+	<p><em>Shipment #: </em> <%= @laptop.box.shipment %></p>
+	<p><em>Status: </em> <%= @laptop.status.name %></p>
+	<p><em>Current Owner: </em> <%= @laptop.owner.name unless (@laptop.owner==nil) %></p>
+<% end %>
+
+	

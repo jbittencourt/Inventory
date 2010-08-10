@@ -1,0 +1,31 @@
+<h1>Show laptop <%= @laptop.serial_number %></h1>
+
+<ul class="object-tools">
+	<li><%= link_to 'Back', laptops_path %></li>
+</ul>
+
+<% rounded_titled_box "Laptop Information",:id=>'laptops-search' do |b| %>
+
+<p><em>UUID: </em> <%= link_to @laptop.id, laptop_path(@laptop) %></p>
+<p><em>Serial Number: </em> <%= link_to  @laptop.serial_number, laptop_path(@laptop) %></p>
+<p><em>Box ID </em> <%= @laptop.box_id %></p>
+<p><em>Shipment #: </em> <%= @laptop.box.shipment %></p>
+<p><em>Status: </em> <span id="laptop_status"><%= @laptop.status.name %><%= in_place_select_editor :laptop_status, { :url=>{:action=>:update_status,:id=>@laptop.id}, :select_options => options_from_collection_for_select(@laptop.available_status,'id','name') } %></p>
+<% end %>
+
+
+<div id="layout-column-left">
+	<% rounded_titled_box "Owners",:id=>'laptop-owners' do |b| %>
+		<% if @laptop.laptop_owners == nil %>
+			No owners up to the moment
+		<% else %>
+			<%= render :partial => 'list_owners', :locals=>{:owners => @laptop.laptop_owners} %>
+		<% end %>
+	<% end %>
+</div>
+	
+<div id="layout-column-right">
+	<% rounded_titled_box "Maintenance",:id=>'laptops-maintenance' do |b| %>
+		
+	<% end %>
+</div>
